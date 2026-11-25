@@ -1,0 +1,271 @@
+/*Barra de navegacion*/
+.nav {
+  background-color: rgb(134, 197, 134);
+  font-size: 30px;
+  padding: 5px;
+  text-align: center;
+  height: 225px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  border-color: aquamarine;
+}
+
+a {
+  margin-right: 50px;
+}
+
+/*body para que todo quede ajustado*/
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(152, 200, 255);
+}
+
+/*footer*/
+footer {
+  background-color: rgb(134, 197, 134);
+  font-size: 20px;
+  padding: 25px;
+  text-align: center;
+  height: 80px;
+  width: 100%;
+  margin: 0;
+}
+
+/*contenedor tipo flex en caso de ser necesario*/
+.flex {
+  display: flex;
+}
+
+input[type="radio"] {
+  width: 15px;
+  height: 15px;
+}
+
+.formradio {
+  height: 50px;
+  width: 300px;
+  display: flex;
+  margin: 5px;
+}
+
+.prueba {
+  display: none;
+  width: 300px;
+  height: 50 px;
+  background-color: rgb(247, 181, 225);
+  font-size: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  border-color:rgb(228, 160, 205);
+  padding: 30px;
+}
+
+/*Clases de contenederos generales*/
+.catalogo {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/*Grid para el catalogo*/
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(120px, 100%), 1fr));
+  background-color: rgb(87, 166, 255);
+  padding: 15px;
+  justify-content: stretch;
+}
+
+.productos>div {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  margin-right: 10px;
+}
+
+/* Contenedor del menú de categorías */
+.menu-categorias {
+  
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+/* Botón principal tipo hamburguesa */
+.btn-hamburguesa-cat {
+  background-color: rgb(51, 112, 168);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  position: sticky;
+  top: 225px;
+}
+
+/* Contenedor de botones oculto por defecto */
+.opciones-categorias {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgb(134, 197, 134);
+  padding: 15px;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Clase que JavaScript activa al presionar el botón */
+.opciones-categorias.abierto {
+  display: flex;
+  position: sticky;
+  top: 279px;
+}
+
+/* Botones individuales (Leches, Aguas, Exóticos) */
+.btn-filtro {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-filtro:hover {
+  background-color: #dceeff;
+}
+
+/* Ajuste para que tus tarjetas del grid funcionen bien al ocultarse/mostrarse */
+.agua,
+.leche,
+.exoticos {
+  display: none;
+  /* Empiezan ocultas como tenías en tu CSS */
+}
+
+/*Contenedor de inicio*/
+.inicioindex {
+  align-items: center;
+  text-align: center;
+  background-color: #6093b6;
+  color: rgb(234, 240, 240);
+  display: block;
+  margin: 75px;
+  border-color: #337aaa;
+  border-radius: 10px;
+}
+
+/*Estilos de texto y logo*/
+h1 {
+  color: rgb(51, 112, 168)
+}
+
+h2 {
+  color: rgb(38, 78, 139)
+}
+
+.header {
+  text-align: center;
+}
+
+p {
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
+}
+
+.logo {
+  margin-left: 500px;
+  opacity: 0.8;
+}
+
+/* Formulario */
+/*Para que los elementos no crezcan de manera descontrolada*/
+* {
+  box-sizing: border-box;
+}
+
+form {
+  margin-left: 550px;
+  max-width: 450px;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: system-ui, sans-serif;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efecto visual cuando el usuario selecciona el campo */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.btn-enviar {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #1d4ed8;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media(max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  .nav {
+    height: 300px;
+  }
+
+  .logo{
+    margin-left: 0;
+    margin: 0 auto;
+  }
+}
