@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Formulario de contacto</title>
+</head>
+
+<body>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/main.js" defer></script>
+  <!--Barra de navegacion-->
+  <div class="nav">
+    <header>
+      <h1>Aguas El Valedor</h1>
+    </header>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="contacto.html">Haz tu pedido</a>
+      <a href="productos.html">Productos</a>
+    </nav>
+  </div>
+  <!--Formulario de contacto -->
+  <h2 style="text-align: center;"> Formulario de contacto</h2>
+  <form id="formulario" method="POST" action="api/registrar.php" novalidate>
+    <!-- Campos del formulario -->
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" placeholder="Nombre completo" required name="nombre">
+    </div>
+    <div>
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" placeholder="Correo electrónico" required name="correo">
+      <label id="mensaje-error" class="error-message" style="display: none;">Por favor, ingrese un correo electrónico
+        válido.</label>
+    </div>
+    <div>
+      <label for="pedido"> ¿Que desea ordenar?</label>
+      <textarea id="pedido" placeholder="Escribe aqui tu respuesta" required name="pedido"></textarea>
+    </div>
+    <div>
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" placeholder="Dirección de entrega" required name="direccion">
+    </div>
+    <div>
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" maxlength="10" placeholder="Número de teléfono" required name="telefono">
+    </div>
+
+    <div>
+      <h4>Como prefiere recibir su pedido</h4>
+      <div class="formradio">
+        <label for="efectivo">Envio a domicilio</label>
+        <input type="radio" id="efectivo" name="forma_pago" value="efectivo">
+      </div>
+      <div class="formradio">
+        <label for="terminal">Recogerlo en sucursal</label>
+        <input type="radio" id="terminal" name="forma_pago" value="terminal">
+      </div>
+    <!--Formulario de pago-->
+      <div class="inftarjeta" id="inftarjeta">
+        <h4>Datos del pago</h4>
+          <label for="titular">Nombre del titular</label>
+          <input type="text" id="titular" placeholder="Nombre del titular" name="titular" required>
+          <label for="numtarjeta">Número de tarjeta (demo)</label>
+          <input type="text" id="numtarjeta" inputmode="numeric" maxlength="16" placeholder="Número ficticio"
+            name="numtarjeta" required>
+          <label for="fechaexpiracion">Fecha de expiración</label>
+          <input type="text" id="fechaexpiracion" placeholder="MM/AA (demo)" name="fechaexpiracion" required maxlength="5">
+          <label for="CVC">CVC</label>
+          <input type="password" id="CVC" maxlength="3" placeholder="CVC ficticio" name="CVC" required>
+      </div>
+      <div>
+        <button type="submit" id="btnEnviar" class="btn-enviar">
+          <span class="btn-texto">Enviar Datos</span>
+          <span class="spinner"></span>
+        </button>
+      </div>
+    </div>
+
+
+
+  </form>
+</body>
+<!-- Pie de página -->
+<footer> <em>Aguas frescas el valedor</em></footer>
+
+</html>
